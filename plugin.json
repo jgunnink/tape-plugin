@@ -1,4 +1,5 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tape",
   "version": "0.1.0",
   "description": "Record short demos in the Tape browser recorder and share a use-tape.com link. Recording-first: capture in Tape, then Upload & share. Not a generic video host.",
@@ -9,13 +10,6 @@
   "homepage": "https://use-tape.com",
   "repository": "https://github.com/jgunnink/tape-cursor-plugin",
   "license": "MIT",
-  "keywords": [
-    "video",
-    "demo",
-    "screen-recording",
-    "loom",
-    "walkthrough",
-    "share"
-  ],
+  "keywords": ["tape", "use-tape", "screen-recording", "demo", "walkthrough", "loom-alternative"],
   "logo": "assets/logo.svg"
 }
