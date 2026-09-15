@@ -1,28 +1,31 @@
 # Tape
 
-Record short demos in the [Tape](https://use-tape.com) browser recorder and share a link back in chat.
+Grok Bot Marketplace plugin for [Tape](https://use-tape.com): record short demos in the browser recorder and share a link in chat.
 
-**For Grok Bot Marketplace.** Install from the Marketplace once listed. This plugin teaches agents the recording-first Tape loop. It is not a Cursor IDE local-plugin pack, and it is not a generic video host.
+**Recording-first.** Agents capture at `/record`, land on preview, then press **Upload & share**. This is not a generic video host and not a Cursor IDE local-plugin pack.
 
-## What you get
+## Package
 
-- Skill: `share-demo-with-tape` — triggers on demo / walkthrough / Loom-style asks
-- Flow: open https://use-tape.com/record → record → **Upload & share** → return `https://use-tape.com/tape/...`
+- Skill: `share-demo-with-tape`
+- Layout: Agent Plugins root `plugin.json` plus `.cursor-plugin/plugin.json`
+- Source: https://github.com/jgunnink/tape-plugin (private until Marketplace submit)
 
 ## Install
 
-Once published: open Grok Bot Marketplace, find **Tape**, install.
+Once listed: install **Tape** from the Grok Bot Marketplace.
 
-Until then (maintainers only): the source lives in this repo. Marketplace listing requires a public repo and submission at https://cursor.com/marketplace/publish
+Marketplace listing needs a public repo and a submit at https://cursor.com/marketplace/publish. Keep this repo private until you are ready.
 
-## Product constraints
+## Verified agent flow
 
-- Recording-first only. Do not add MCP tools that upload arbitrary MP4/WebM outside the Tape recorder.
-- Sign-in is required for upload; recording can start without an account.
-- Free hosted-video quotas apply; keep agent demos short.
+1. Open https://use-tape.com/record (screen-only preferred)
+2. Record the demo (30–90s)
+3. On `/preview/...`, title the clip
+4. Click **Upload & share**
+5. If signed out: email magic link → user pastes the Firebase sign-in URL → finish auth → upload
+6. Return `https://use-tape.com/tape/<id>`
 
 ## Links
 
 - Product: https://use-tape.com
 - Record: https://use-tape.com/record
-- Share links: `https://use-tape.com/tape/<id>`
